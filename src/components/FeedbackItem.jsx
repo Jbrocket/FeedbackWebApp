@@ -1,12 +1,23 @@
 import React from 'react'
+import { FaTimes } from 'react-icons/fa'
+import Card from './shared/Card'
+import PropTypes from 'prop-types'
 
-function FeedbackItem() {
-  return (
-    <div className='card'>
-        <div className='num-display'>10</div>
-        <div className='text-display'>Your application sucks balls</div>
-    </div>
-  )
+function FeedbackItem({ item, handleDelete }) {
+
+    return (
+        <Card>
+            <div className='num-display'>{item.rating}</div>
+            <button onClick={() => handleDelete(item.id)} className="close">
+                <FaTimes color='white' />
+            </button>
+            <div className='text-display'>{item.text}</div>
+        </Card>
+    );
 }
 
-export default FeedbackItem
+FeedbackItem.propTypes = {
+    item: PropTypes.object.isRequired
+}
+
+export default FeedbackItem;
