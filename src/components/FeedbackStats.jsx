@@ -17,7 +17,7 @@ function FeedbackStats({ feedback } ) {
 }
 
 FeedbackStats.propTypes = {
-    feeedback: PropTypes.array.isRequired
+    feedback: PropTypes.array.isRequired
 }
 
 export default FeedbackStats
