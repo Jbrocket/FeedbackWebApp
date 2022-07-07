@@ -9,7 +9,7 @@ function FeedbackItem({ item, handleDelete }) {
         <Card>
             <div className='num-display'>{item.rating}</div>
             <button onClick={() => handleDelete(item.id)} className="close">
-                <FaTimes color='white' />
+                <FaTimes color='red' />
             </button>
             <div className='text-display'>{item.text}</div>
         </Card>
